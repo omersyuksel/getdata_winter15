@@ -95,7 +95,7 @@ aggfinal = aggregate(final, by = list(Group.subject=final$subject,
                                       Group.sumtype = final$sumtype
                                       ), FUN = mean)
 
-rename(aggfinal,meanvalue=value)
+aggfinal <- rename(aggfinal,meanvalue=value)
 
 aggfinal$subject <- NULL
 aggfinal$activity <- NULL
