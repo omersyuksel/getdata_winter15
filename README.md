@@ -12,7 +12,7 @@ Steps to create the tidy dataset:
 - The output is "tidy_sum.txt"
 
 ##Script information
-The code book provides a step-by-step explanation of the script cleans and transforms the raw dataset.
+The code book provides a step-by-step explanation of the script that cleans and transforms the raw dataset.
 
 
 
