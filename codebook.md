@@ -1,5 +1,5 @@
 #Code Book
-This code book describes the variables and their values in the dataset (tidy_sum.txt)
+This code book describes the variables and their values in the dataset (tidy_sum.txt), and the steps taken by the script to create a tidy dataset.
 
 ##Variables
 There are three categories of variables: identifiers, measurements, and values. 
