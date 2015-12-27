@@ -79,11 +79,12 @@ The script loads raw data from training and test data files in the project, merg
   - Convert the column into a factor with corresponding labels.
 - Create a narrow form dataset by using the 'melt' command.
   - Choose 'subject' and 'activity' as identifiers, and the rest as variables.
-- However, the variable labels are not very readable and they try to describe multiple aspects in a single variable, e.g. the device, the XYZ dimension, mean or standard deviation, etc.
+- However, the variable labels are confusing even after reformatting. Also, they try to describe multiple aspects of a measurement in a single value, e.g. the device, the XYZ dimension, mean or standard deviation, etc.
   - This violates the 'one variable per column' principle.
-  - We can break the 'variable' column down into multiple columns describing an aspect of the measurement, thereby making it more readable.
-- Using regular expressions, we can create columns for: Dimension (XYZ), Device(Acc. or Gyroscope), Summary Type(Mean or Standard dev.), Domain(Time or Frequency) and Measurement Category(Body, Gravity, etc.) from the single `variable' column.
-  - Note that this does not affect the rows in any way, it just helps reading the data.
+  - We can break the 'variable' column down into multiple columns, each describing a single aspect of the measurement.
+- Using regular expressions, we can create columns for: Dimension (XYZ), Device(Acc. or Gyroscope), Summary Type(Mean or Standard dev.), Domain(Time or Frequency) and Measurement Category(Body, Gravity, etc.) from the `variable' column.
+  - Each new column is a factor with only a handful of unique values (as opposed to 66 unique values of the variable column).
+  - Note that this does not affect the rows in any way, it just makes the data more readable.
 - Finally, summarize the dataset using aggregate function.
   - Also remove the "excess" columns no longer required after the operation.
 - We write the summarized dataset into the file "tidy_sum.txt"
