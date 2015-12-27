@@ -72,7 +72,7 @@ The script loads raw data from training and test data files in the project, merg
   - Load subject data for training and test.
   - Append "subject" as a column in the corresponding "train" and "test" data frames.
 - Now we should have training and test data frames with all columns we need. We can start row- wise merging.
-  - Combine "train" and "test" data frames together using cbind.
+  - Combine "train" and "test" data frames together using rbind function.
 - Now we have a single data frame to play with and can work on making it more readable.
 - Discard all "X" columns except those with mean() and std() in the labels.
 - Load activity labels from file and use this to make activity column human- readable.
