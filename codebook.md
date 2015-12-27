@@ -3,11 +3,11 @@ This code book describes the variables and their values in the dataset (tidy_sum
 
 ###Overview
 There are three categories of variables: identifiers, measurements, and values. 
-- Identifiers describe the subjects and activities in the experiment. 
-- Measurements describe aspects of the variables in the raw data, i.e. time or frequency domain, dimension, etc. 
-- Values are the numbers pertaining to each measurement.
+- *Identifiers* describe the subjects and activities in the experiment. 
+- *Measurements* describe aspects of the features in the raw data (from features.txt), such as the dimension, time or frequency domain, or the device used. 
+- *Values* are (numeric) outcomes of the measurements.
 
-The summarized data is grouped by the identifiers and measurements, hence the "Group." prefix in the variable names.
+The summarized data is grouped by the identifiers and measurements, hence the "Group." prefix in their names. The values are averaged by these groups.
 
 (note that the data is in narrow form)
 
@@ -46,7 +46,7 @@ The summarized data is grouped by the identifiers and measurements, hence the "G
 
 **Group.sumtype**
 - **Type**: nominal
-- **Description**: the function used to summarize the data in the experiment.
+- **Description**: the function used to summarize the (raw) data in the experiment.
 - **Values**: 
   - Mean
   - Stdev: standard deviation
@@ -56,5 +56,5 @@ The summarized data is grouped by the identifiers and measurements, hence the "G
 **meanvalue**
 - **Type**: numeric
 - **Description**: average normalized value.
-- **Remarks**: Mean value per measurement, activity, and subject. Since the data is in narrow form, see the "measurements" part describing the type of the value. Due to normalization, the values have no units.
+- **Remarks**: Mean value per measurement, activity, and subject. Since the data is in narrow form, see the "measurements" part describing the type of the value. The values have no units since they are normalized.
 - **Values**: real numbers in range [- 1, 1]
